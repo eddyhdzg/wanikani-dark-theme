@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Wanikani Dark Mode",
+  "version": "0.1.0",
+  "content_scripts": [
+    {
+      "matches": ["*://*.wanikani.com/*"],
+      "js": ["script.js"],
+      "css": ["styles.css", "scrollbar.css"],
+      "exclude_matches": ["*://community.wanikani.com/*"]
+    }
+  ]
+}

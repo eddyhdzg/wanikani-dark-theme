@@ -1,0 +1,137 @@
+:root {
+  --grey1: #bcbcbc;
+  --grey2: #1e2123;
+  --grey3: #232629;
+  --grey4: #31363b;
+  --grey5: #4d4d4d;
+  --blue-1: #3daee9;
+  --blue-1-50: #3daee980;
+  --yellow-1: #fdbc4b;
+  --yellow-2: #c9ce3b;
+  --yellow-1-50: #fdbc4b80;
+  --green-1: #2ecc71;
+  --green-1-50: #2ecc7180;
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --shadow3: 0 1px 1px rgb(0 0 0 / 70%), 0 2px 2px rgb(0 0 0 / 70%);
+  --filter: brightness(80%) hue-rotate(226deg);
+}
+
+body {
+  background-image: none !important;
+  background-color: var(--grey4) !important;
+}
+
+header {
+  background-color: var(--grey3) !important;
+  background-image: none !important;
+  border-bottom: none !important;
+  box-shadow: var(--shadow3) !important;
+}
+header .logo {
+  filter: var(--filter) !important;
+}
+header #sitemap {
+  background-color: var(--grey3);
+}
+header span {
+  color: var(--grey1);
+  text-shadow: none;
+}
+header button {
+  background-color: var(--grey2) !important;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7), 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+header button#search__trigger__mobile {
+  margin-right: 16px;
+}
+header button.navigation__toggle {
+  outline: none !important;
+}
+header button.navigation__toggle:hover {
+  box-shadow: 0px 0 0px 2px var(--white-10);
+}
+header button.navigation__toggle:focus {
+  box-shadow: 0px 0 0px 2px var(--white-30);
+}
+header button:hover, header button:focus {
+  box-shadow: none;
+}
+header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):hover, header button.navigation__toggle:not(#search__trigger)[data-expanded=true]:hover {
+  border-color: var(--white-10);
+}
+header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):not(#search__trigger):not(#search__trigger__mobile)[data-expanded=true], header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):focus, header button.navigation__toggle:focus {
+  border-color: var(--white-30);
+}
+header button.sitemap__section-header {
+  outline: none;
+  border: 2px solid transparent;
+}
+header button.sitemap__section-header--radicals:hover {
+  border-color: var(--blue-1-50) !important;
+}
+header button.sitemap__section-header--radicals[data-expanded=true], header button.sitemap__section-header--radicals:focus {
+  border-color: var(--blue-1) !important;
+}
+header button.sitemap__section-header--kanji:hover {
+  border-color: var(--yellow-1-50) !important;
+}
+header button.sitemap__section-header--kanji[data-expanded=true], header button.sitemap__section-header--kanji:focus {
+  border-color: var(--yellow-1) !important;
+}
+header button.sitemap__section-header--vocabulary:hover {
+  border-color: var(--green-1-50) !important;
+}
+header button.sitemap__section-header--vocabulary[data-expanded=true], header button.sitemap__section-header--vocabulary:focus {
+  border-color: var(--green-1) !important;
+}
+header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):not(#search__trigger):not(#search__trigger__mobile)[data-expanded=true], header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):focus, header button.navigation__toggle:focus {
+  border-color: var(--white-30);
+}
+header .navigation-shortcut a {
+  color: var(--grey1);
+  text-shadow: none;
+  border-color: var(--white-10);
+}
+header .navigation-shortcut a span {
+  background: transparent;
+  color: var(--green-1);
+}
+header .navigation-shortcut a:hover {
+  border-color: var(--white-30);
+}
+header .sitemap--divider {
+  border-top-color: var(--grey4);
+}
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account) {
+  background-color: var(--grey3);
+}
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account)::before {
+  background-color: var(--grey3);
+}
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--radicals span,
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--radicals a, header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--kanji span,
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--kanji a, header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--vocabulary span,
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--vocabulary a {
+  color: var(--grey3);
+}
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--radicals {
+  background-color: var(--blue-1);
+}
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--radicals::before {
+  background-color: var(--blue-1);
+}
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--kanji {
+  background-color: var(--yellow-1) !important;
+}
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--kanji::before {
+  background-color: var(--yellow-1);
+}
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--vocabulary {
+  background-color: var(--green-1) !important;
+}
+header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--vocabulary::before {
+  background-color: var(--green-1);
+}
+
+/*# sourceMappingURL=styles.css.map */
