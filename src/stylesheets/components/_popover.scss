@@ -1,0 +1,26 @@
+.popover {
+  .popover-content {
+    ul {
+      li {
+        color: var(--grey-3) !important;
+        background-image: none !important;
+        border-bottom-color: var(--grey-3) !important;
+
+        span {
+          color: var(--grey-3) !important;
+        }
+        &:first-child {
+          background-color: var(--blue-1) !important;
+        }
+
+        &:nth-child(2) {
+          background-color: var(--yellow-1) !important;
+        }
+
+        &:last-child {
+          background-color: var(--green-1) !important;
+        }
+      }
+    }
+  }
+}

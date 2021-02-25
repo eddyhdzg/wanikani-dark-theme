@@ -1,0 +1,48 @@
+#main footer,
+#subscriptions footer,
+#public-profile footer {
+  background-image: url(https://i.imgur.com/MRVqVnw.png) !important;
+  background-position: top !important;
+
+  ul {
+    -webkit-box-shadow: var(--shadow-1) !important;
+    -moz-box-shadow: var(--shadow-1) !important;
+    box-shadow: var(--shadow-1) !important;
+    background-color: var(--grey-3) !important;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  li {
+    background-color: transparent !important;
+
+    li:last-child {
+      background-color: var(--red-1) !important;
+    }
+  }
+
+  li:last-child {
+    background-color: var(--red-1) !important;
+    border: {
+      bottom-right-radius: 5px !important;
+      top-right-radius: 5px !important;
+    }
+
+    color: white !important;
+    span {
+      color: white !important;
+    }
+  }
+
+  a,
+  a:hover {
+    background-color: transparent !important;
+    padding-top: 10px !important;
+    transition: none !important;
+  }
+
+  a:hover {
+    text-decoration: underline !important;
+  }
+}

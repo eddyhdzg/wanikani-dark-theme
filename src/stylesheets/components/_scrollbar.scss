@@ -1,0 +1,34 @@
+html {
+    scrollbar-face-color: var(--grey-5);
+    scrollbar-base-color: var(--grey-5);
+    scrollbar-3dlight-color: var(--grey-5);
+    scrollbar-highlight-color: var(--grey-5);
+    scrollbar-track-color: var(--grey-2);
+    scrollbar-arrow-color: var(--grey-2);
+    scrollbar-shadow-color: var(--grey-5);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 3px;
+  }
+  ::-webkit-scrollbar-button {
+    background-color: var(--grey-5);
+  }
+  ::-webkit-scrollbar-track {
+    background-color: var(--grey-5);
+  }
+  ::-webkit-scrollbar-track-piece {
+    background-color: var(--grey-2);
+  }
+  ::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: var(--grey-5);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-corner {
+    background-color: var(--grey-5);
+  }
+  ::-webkit-resizer {
+    background-color: var(--grey-5);
+  }

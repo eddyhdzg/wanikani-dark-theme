@@ -1,0 +1,309 @@
+.dashboard-progress,
+.forecast,
+#apprentice,
+#guru,
+#master,
+#enlightened,
+#burned {
+  -webkit-box-shadow: var(--shadow-1) !important;
+  -moz-box-shadow: var(--shadow-1) !important;
+  box-shadow: var(--shadow-1) !important;
+  background-color: var(--grey-3) !important;
+}
+
+// ### Section 1 ###
+.lessons-and-reviews {
+  &__button {
+    background-color: var(--grey-3) !important;
+    box-shadow: var(--shadow-1) !important;
+
+    span {
+      background-color: transparent !important;
+    }
+  }
+
+  &__lessons-button {
+    span {
+      color: var(--yellow-1) !important;
+    }
+  }
+
+  &__reviews-button {
+    span {
+      color: var(--blue-1) !important;
+    }
+  }
+}
+
+// ### Section 2 ###
+.dashboard-progress {
+  h2 {
+    border-color: var(--grey-5);
+  }
+
+  .progress-bar {
+    background-color: var(--grey-2) !important;
+    box-shadow: var(--shadow-2) !important;
+    transition: box-shadow linear 0.2s !important;
+    border: none !important;
+
+    &__progress {
+      background-color: var(--yellow-1) !important;
+    }
+  }
+
+  .progress-component {
+    > div.rounded {
+      background-color: var(--grey-4);
+    }
+  }
+
+  .progress-entry {
+    color: var(--grey-3) !important;
+
+    a {
+      color: var(--grey-3) !important;
+      text-shadow: none !important;
+      box-shadow: var(--shadow-1) !important;
+    }
+
+    a.radical-icon div,
+    a.kanji-icon div {
+      border-radius: 4px;
+    }
+
+    a.radical-icon div {
+      background-image: linear-gradient(
+        to bottom,
+        var(--blue-2),
+        var(--blue-1)
+      );
+    }
+    a.kanji-icon div {
+      background-color: var(--yellow-1) !important;
+    }
+  }
+}
+
+// ### Section 3 ###
+.forecast {
+  .review-forecast {
+    &__day,
+    &__day-label,
+    &__day-header,
+    &__change,
+    &__running-total {
+      background-color: transparent !important;
+    }
+
+    &__day {
+      border-bottom: none;
+      border-radius: 0;
+
+      &-header {
+        &:before,
+        &:after,
+        &::before,
+        &::after {
+          display: none !important;
+        }
+      }
+
+      &-label {
+        border-bottom: 1px solid var(--grey-4);
+        border-radius: 0;
+        padding-bottom: 12px;
+      }
+
+      &.is-collapsed {
+        border-bottom: 1px solid var(--grey-4);
+        .review-forecast__day-label {
+          background-color: transparent;
+          border-bottom-width: 0;
+          padding-bottom: 4px;
+        }
+      }
+    }
+
+    &__hour {
+      background-color: var(--grey-4) !important;
+
+      &:nth-child(2) {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        padding-bottom: 0px;
+
+        th,
+        td {
+          padding-bottom: 0px;
+        }
+      }
+
+      th,
+      td {
+        border-color: var(--grey-4);
+      }
+    }
+
+    &__change {
+      border-right-color: var(--grey-4);
+    }
+  }
+}
+
+// ### Section 4 ###
+#apprentice,
+#guru,
+#master,
+#enlightened,
+#burned {
+  background-image: none;
+}
+
+#apprentice {
+  span {
+    color: var(--blue-1) !important;
+  }
+}
+
+#guru {
+  span {
+    color: var(--green-1) !important;
+  }
+}
+
+#master {
+  span {
+    color: var(--yellow-2) !important;
+  }
+}
+
+#enlightened {
+  span {
+    color: var(--orange-1) !important;
+  }
+}
+
+#burned {
+  span {
+    color: var(--red-1) !important;
+  }
+}
+
+// ### Section 5 ###
+.dashboard-sub-section {
+  -webkit-box-shadow: var(--shadow-1) !important;
+  -moz-box-shadow: var(--shadow-1) !important;
+  box-shadow: var(--shadow-1) !important;
+  background-color: var(--grey-3) !important;
+  border-radius: 5px;
+
+  .see-more {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  h3 {
+    background-color: transparent !important;
+  }
+}
+
+.kotoba-table-list table {
+  span,
+  time,
+  i {
+    color: var(--grey-3) !important;
+  }
+
+  tr {
+    background-image: none !important;
+    border-bottom: 1px solid var(--grey-3) !important;
+  }
+
+  tr[class^="radical"] {
+    background-color: var(--blue-1) !important;
+  }
+
+  tr[class^="kanji"] {
+    background-color: var(--yellow-1) !important;
+  }
+
+  tr[class^="vocabulary"] {
+    background-color: var(--green-1) !important;
+  }
+}
+
+// ### Section 6 ###
+.forum-topics-list {
+  h3 {
+    align-items: center !important;
+    background-color: var(--grey-3) !important;
+    box-shadow: var(--shadow-1) !important;
+    color: var(--grey-1) !important;
+    display: flex !important;
+    margin-bottom: 3px !important;
+    max-height: 60px !important;
+    padding-bottom: 3px !important;
+    padding-top: 3px !important;
+    text-align: left !important;
+    background-image: none !important;
+  }
+
+  .heading-symbol {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 4px !important;
+    border: none !important;
+    box-shadow: none !important;
+
+    i:before {
+      color: var(--grey-1) !important;
+    }
+  }
+
+  table {
+    color: var(--grey-1);
+    margin-bottom: 3px;
+
+    tr {
+      background-color: var(--grey-2) !important;
+      background-image: none !important;
+      &:hover {
+        filter: brightness(0.8) !important;
+      }
+
+      td {
+        &.description {
+          border-bottom: 1px solid var(--grey-4) !important;
+        }
+      }
+
+      &:last-child {
+        td {
+          &.description {
+            border-bottom: none !important;
+          }
+        }
+      }
+    }
+
+    hr {
+      display: none;
+    }
+  }
+
+  .see-more {
+    background-color: var(--grey-3) !important;
+
+    .small-caps {
+      background-image: none !important;
+      box-shadow: var(--shadow-4) !important;
+    }
+  }
+}
