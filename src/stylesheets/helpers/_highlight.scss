@@ -1,0 +1,34 @@
+[class*="highlight-radical"] {
+  color: var(--grey-3) !important;
+  background-color: var(--blue-1) !important;
+}
+
+[class*="highlight-kanji"] {
+  color: var(--grey-3) !important;
+  background-color: var(--yellow-1) !important;
+}
+
+[class*="highlight-vocabulary"] {
+  color: var(--grey-3) !important;
+  background-color: var(--green-1) !important;
+}
+
+[class*="highlight"] {
+  border-radius: 3px !important;
+}
+
+// CHECK
+.highlight-reading {
+  background-color: var(--grey-5) !important;
+}
+
+.highlight-meaning {
+  background-color: var(--grey-4) !important;
+}
+
+.highlight-reading,
+.highlight-meaning {
+  > span {
+    color: var(--grey-1) !important;
+  }
+}

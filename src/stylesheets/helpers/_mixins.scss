@@ -3,3 +3,13 @@
   background-image: none !important;
   box-shadow: var(--shadow-1) !important;
 }
+
+@mixin button {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+}

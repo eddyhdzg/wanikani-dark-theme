@@ -45,3 +45,18 @@
     text-decoration: underline !important;
   }
 }
+
+#lessons-hotkey-footer {
+  #hotkeys {
+    @include button;
+  }
+
+  #report-errors {
+    @include button;
+
+    button {
+      background-color: inherit !important;
+      border-radius: inherit !important;
+    }
+  }
+}

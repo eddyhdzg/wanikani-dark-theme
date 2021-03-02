@@ -1,3 +1,35 @@
+[class*=highlight-radical] {
+  color: var(--grey-3) !important;
+  background-color: var(--blue-1) !important;
+}
+
+[class*=highlight-kanji] {
+  color: var(--grey-3) !important;
+  background-color: var(--yellow-1) !important;
+}
+
+[class*=highlight-vocabulary] {
+  color: var(--grey-3) !important;
+  background-color: var(--green-1) !important;
+}
+
+[class*=highlight] {
+  border-radius: 3px !important;
+}
+
+.highlight-reading {
+  background-color: var(--grey-5) !important;
+}
+
+.highlight-meaning {
+  background-color: var(--grey-4) !important;
+}
+
+.highlight-reading > span,
+.highlight-meaning > span {
+  color: var(--grey-1) !important;
+}
+
 :root {
   --grey-1: #bcbcbc;
   --grey-2: #1e2123;
@@ -21,6 +53,7 @@
     2px 2px 2px rgba(0, 0, 0, 0.7) inset;
   --shadow-3: 0 1px 1px rgb(0 0 0 / 70%), 0 2px 2px rgb(0 0 0 / 70%);
   --shadow-4: 0 -1px 1px rgba(0, 0, 0, 0.7);
+  --shadow-5: 0 1px 1px rgba(0, 0, 0, 0.7), 0 2px 2px rgba(0, 0, 0, 0.7);
   --filter: brightness(80%) hue-rotate(226deg);
 }
 
@@ -82,6 +115,29 @@ body {
 #main footer a:hover,
 #public-profile footer a:hover {
   text-decoration: underline !important;
+}
+
+#lessons-hotkey-footer #hotkeys {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+}
+#lessons-hotkey-footer #report-errors {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+}
+#lessons-hotkey-footer #report-errors button {
+  background-color: inherit !important;
+  border-radius: inherit !important;
 }
 
 #search #main-ico-search {
@@ -214,6 +270,14 @@ textarea {
   border-color: transparent !important;
 }
 
+button {
+  border-radius: 5px;
+}
+
+#loading-screen {
+  background-color: var(--grey-3) !important;
+}
+
 .popover .popover-content ul li {
   color: var(--grey-3) !important;
   background-image: none !important;
@@ -283,7 +347,8 @@ i,
 a,
 span,
 p,
-time {
+time,
+div {
   text-shadow: none !important;
 }
 
@@ -371,6 +436,7 @@ time {
   display: none !important;
 }
 .forecast .review-forecast__day-label {
+  background-color: var(--grey-3) !important;
   border-bottom: 1px solid var(--grey-4);
   border-radius: 0;
   padding-bottom: 12px;
@@ -507,6 +573,129 @@ time {
 .forum-topics-list .see-more .small-caps {
   background-image: none !important;
   box-shadow: var(--shadow-4) !important;
+}
+
+#screen-quiz-ready ul.btn-set li#quiz-ready-read-lessons {
+  border-color: var(--grey-5);
+}
+#screen-quiz-ready ul.btn-set li#quiz-ready-continue {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+  border-color: transparent;
+}
+
+#stats,
+#summary-button,
+#header-buttons {
+  color: var(--grey-1) !important;
+  z-index: 100 !important;
+}
+#stats button,
+#summary-button button,
+#header-buttons button {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+}
+
+#stats *,
+#header-buttons * {
+  color: inherit !important;
+  background-color: transparent !important;
+}
+
+#lessons header {
+  position: relative !important;
+  z-index: 11 !important;
+}
+#lessons #main-info {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+}
+#lessons #main-info.radical {
+  color: var(--blue-1) !important;
+}
+#lessons #main-info.kanji {
+  color: var(--yellow-1) !important;
+}
+#lessons #main-info.vocabulary {
+  color: var(--green-1) !important;
+}
+#lessons #supplement-nav {
+  background-color: var(--grey-4) !important;
+  box-shadow: var(--shadow-5) !important;
+}
+#lessons #supplement-nav li::before {
+  border-bottom-color: var(--grey-3) !important;
+  bottom: -50px !important;
+}
+#lessons #supplement-nav ul {
+  color: var(--grey-1) !important;
+}
+#lessons #supplement-info {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+  color: var(--grey-1);
+  margin-top: 30px !important;
+}
+#lessons #supplement-info h2 {
+  border-bottom-color: var(--grey-4) !important;
+}
+#lessons #supplement-info a span {
+  color: var(--grey-3) !important;
+  box-shadow: var(--shadow-1) !important;
+}
+#lessons #supplement-info a span.radical {
+  background-color: var(--blue-1) !important;
+}
+#lessons #supplement-info a span.kanji {
+  background-color: var(--yellow-1) !important;
+}
+#lessons #supplement-info #prev-btn:hover,
+#lessons #supplement-info #next-btn:hover {
+  border-radius: 5px !important;
+  background-color: var(--grey-3) !important;
+  filter: brightness(0.8) !important;
+}
+#lessons #batch-items {
+  bottom: unset !important;
+  position: relative !important;
+  width: auto !important;
+}
+#lessons #batch-items span {
+  color: var(--grey-3) !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+}
+#lessons #batch-items span.radical {
+  background-color: var(--blue-1) !important;
+}
+#lessons #batch-items span.kanji {
+  background-color: var(--yellow-1) !important;
+}
+#lessons #batch-items span.vocabulary {
+  background-color: var(--green-1) !important;
+}
+#lessons #batch-items [data-index=quiz] > span {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,126 @@
+#screen-quiz-ready {
+  ul.btn-set {
+    li#quiz-ready-read-lessons {
+      border-color: var(--grey-5);
+    }
+    li#quiz-ready-continue {
+      @include button;
+      border-color: transparent;
+    }
+  }
+}
+
+#stats,
+#summary-button,
+#header-buttons {
+  color: var(--grey-1) !important;
+  z-index: 100 !important;
+
+  button {
+    @include button;
+  }
+}
+
+#stats,
+#header-buttons {
+  * {
+    color: inherit !important;
+    background-color: transparent !important;
+  }
+}
+
+#lessons {
+  header {
+    position: relative !important;
+    z-index: 11 !important;
+  }
+
+  #main-info {
+    @include box;
+
+    &.radical {
+      color: var(--blue-1) !important;
+    }
+
+    &.kanji {
+      color: var(--yellow-1) !important;
+    }
+
+    &.vocabulary {
+      color: var(--green-1) !important;
+    }
+  }
+
+  #supplement-nav {
+    background-color: var(--grey-4) !important;
+    box-shadow: var(--shadow-5) !important;
+
+    li::before {
+      border-bottom-color: var(--grey-3) !important;
+      bottom: -50px !important;
+    }
+
+    ul {
+      color: var(--grey-1) !important;
+    }
+  }
+
+  #supplement-info {
+    @include box;
+    border-radius: 5px !important;
+    color: var(--grey-1);
+    margin-top: 30px !important;
+
+    h2 {
+      border-bottom-color: var(--grey-4) !important;
+    }
+
+    a span {
+      color: var(--grey-3) !important;
+      box-shadow: var(--shadow-1) !important;
+
+      &.radical {
+        background-color: var(--blue-1) !important;
+      }
+
+      &.kanji {
+        background-color: var(--yellow-1) !important;
+      }
+    }
+
+    #prev-btn:hover,
+    #next-btn:hover {
+      border-radius: 5px !important;
+      background-color: var(--grey-3) !important;
+      filter: brightness(0.8) !important;
+    }
+  }
+
+  #batch-items {
+    bottom: unset !important;
+    position: relative !important;
+    width: auto !important;
+
+    span {
+      color: var(--grey-3) !important;
+      box-shadow: var(--shadow-1) !important;
+      border-radius: 5px !important;
+
+      &.radical {
+        background-color: var(--blue-1) !important;
+      }
+
+      &.kanji {
+        background-color: var(--yellow-1) !important;
+      }
+
+      &.vocabulary {
+        background-color: var(--green-1) !important;
+      }
+    }
+
+    [data-index="quiz"] > span {
+      @include button;
+    }
+  }
+}
