@@ -5,10 +5,8 @@
 }
 
 header {
-  background-color: var(--grey-3) !important;
-  background-image: none !important;
-  border-bottom: none !important;
-  box-shadow: var(--shadow-3) !important;
+  @include box;
+  border-bottom-color: transparent !important;
 
   .logo {
     filter: var(--filter) !important;
@@ -28,25 +26,25 @@ header {
     background-color: var(--grey-2) !important;
     box-shadow: var(--shadow-1);
 
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+
     &#search__trigger__mobile {
       margin-right: 16px;
     }
 
     &.navigation__toggle {
       outline: none !important;
-    }
 
-    &.navigation__toggle:hover {
-      box-shadow: 0px 0 0px 2px var(--white-10);
-    }
+      &:hover {
+        box-shadow: 0px 0 0px 2px var(--white-10);
+      }
 
-    &.navigation__toggle:focus {
-      box-shadow: 0px 0 0px 2px var(--white-30);
-    }
-
-    &:hover,
-    &:focus {
-      box-shadow: none;
+      &:focus {
+        box-shadow: 0px 0 0px 2px var(--white-30);
+      }
     }
 
     &:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):hover,
@@ -63,33 +61,33 @@ header {
     &.sitemap__section-header {
       outline: none;
       border: 2px solid transparent;
-    }
 
-    &.sitemap__section-header--radicals:hover {
-      border-color: var(--blue-1-50) !important;
-    }
+      &--radicals:hover {
+        border-color: var(--blue-1-50) !important;
+      }
 
-    &.sitemap__section-header--radicals[data-expanded="true"],
-    &.sitemap__section-header--radicals:focus {
-      border-color: var(--blue-1) !important;
-    }
+      &--radicals[data-expanded="true"],
+      &--radicals:focus {
+        border-color: var(--blue-1) !important;
+      }
 
-    &.sitemap__section-header--kanji:hover {
-      border-color: var(--yellow-1-50) !important;
-    }
+      &--kanji:hover {
+        border-color: var(--yellow-1-50) !important;
+      }
 
-    &.sitemap__section-header--kanji[data-expanded="true"],
-    &.sitemap__section-header--kanji:focus {
-      border-color: var(--yellow-1) !important;
-    }
+      &--kanji[data-expanded="true"],
+      &--kanji:focus {
+        border-color: var(--yellow-1) !important;
+      }
 
-    &.sitemap__section-header--vocabulary:hover {
-      border-color: var(--green-1-50) !important;
-    }
+      &--vocabulary:hover {
+        border-color: var(--green-1-50) !important;
+      }
 
-    &.sitemap__section-header--vocabulary[data-expanded="true"],
-    &.sitemap__section-header--vocabulary:focus {
-      border-color: var(--green-1) !important;
+      &--vocabulary[data-expanded="true"],
+      &--vocabulary:focus {
+        border-color: var(--green-1) !important;
+      }
     }
 
     &:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):not(#search__trigger):not(#search__trigger__mobile)[data-expanded="true"],
@@ -99,20 +97,23 @@ header {
     }
   }
 
-  .navigation-shortcut {
+  .navigation-shortcut,
+  .navigation-shortcut[data-count="0"] {
     a {
       border-color: var(--white-10);
+
+      &:focus,
+      &:hover {
+        border-color: var(--white-30);
+      }
 
       span {
         background: transparent;
         color: var(--green-1) !important;
         padding-left: 14px;
         padding-right: 0;
+        margin-right: 12px;
       }
-    }
-    a:hover,
-    a:focus {
-      border-color: var(--white-30);
     }
   }
 

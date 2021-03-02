@@ -6,7 +6,7 @@
     {
       "matches": ["*://*.wanikani.com/*"],
       "js": ["script.js"],
-      "css": ["styles.css", "scrollbar.css"],
+      "css": ["styles.css"],
       "exclude_matches": ["*://community.wanikani.com/*"]
     }
   ]

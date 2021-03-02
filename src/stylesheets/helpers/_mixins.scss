@@ -1,0 +1,5 @@
+@mixin box {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+}

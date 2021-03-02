@@ -1,7 +1,9 @@
 // ### Helpers ###
+@import "helpers/mixins";
 @import "helpers/variables";
 
 // ### Components ###
+@import "components/alert";
 @import "components/body";
 @import "components/footer";
 @import "components/header";

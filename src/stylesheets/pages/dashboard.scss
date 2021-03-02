@@ -4,11 +4,9 @@
 #guru,
 #master,
 #enlightened,
-#burned {
-  -webkit-box-shadow: var(--shadow-1) !important;
-  -moz-box-shadow: var(--shadow-1) !important;
-  box-shadow: var(--shadow-1) !important;
-  background-color: var(--grey-3) !important;
+#burned,
+.dashboard-sub-section {
+  @include box;
 }
 
 // ### Section 1 ###
@@ -45,7 +43,6 @@
     background-color: var(--grey-2) !important;
     box-shadow: var(--shadow-2) !important;
     transition: box-shadow linear 0.2s !important;
-    border: none !important;
 
     &__progress {
       background-color: var(--yellow-1) !important;
@@ -63,7 +60,6 @@
 
     a {
       color: var(--grey-3) !important;
-      text-shadow: none !important;
       box-shadow: var(--shadow-1) !important;
     }
 
@@ -157,14 +153,6 @@
 }
 
 // ### Section 4 ###
-#apprentice,
-#guru,
-#master,
-#enlightened,
-#burned {
-  background-image: none;
-}
-
 #apprentice {
   span {
     color: var(--blue-1) !important;
@@ -197,10 +185,6 @@
 
 // ### Section 5 ###
 .dashboard-sub-section {
-  -webkit-box-shadow: var(--shadow-1) !important;
-  -moz-box-shadow: var(--shadow-1) !important;
-  box-shadow: var(--shadow-1) !important;
-  background-color: var(--grey-3) !important;
   border-radius: 5px;
 
   .see-more {
@@ -241,9 +225,8 @@
 // ### Section 6 ###
 .forum-topics-list {
   h3 {
+    @include box;
     align-items: center !important;
-    background-color: var(--grey-3) !important;
-    box-shadow: var(--shadow-1) !important;
     color: var(--grey-1) !important;
     display: flex !important;
     margin-bottom: 3px !important;
@@ -251,7 +234,6 @@
     padding-bottom: 3px !important;
     padding-top: 3px !important;
     text-align: left !important;
-    background-image: none !important;
   }
 
   .heading-symbol {
