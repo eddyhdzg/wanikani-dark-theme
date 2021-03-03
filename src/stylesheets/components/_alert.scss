@@ -1,4 +1,6 @@
+#information,
 .system-alert {
   @include box;
   border-color: transparent !important;
+  border-radius: 5px !important;
 }

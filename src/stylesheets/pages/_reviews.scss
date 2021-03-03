@@ -1,0 +1,203 @@
+#reviews {
+  #question {
+    #stats {
+      color: var(--grey-1) !important;
+    }
+    #summary-button {
+      a {
+        i {
+          color: var(--grey-1) !important;
+        }
+      }
+    }
+
+    #character {
+      @include box;
+      position: relative;
+      z-index: 10 !important;
+      border-radius: 0px !important;
+
+      &.radical {
+        span {
+          color: var(--blue-1) !important;
+        }
+      }
+
+      &.kanji {
+        span {
+          color: var(--yellow-1) !important;
+        }
+      }
+
+      &.vocabulary {
+        span {
+          color: var(--green-1) !important;
+        }
+      }
+    }
+
+    #question-type {
+      background-color: var(--grey-4) !important;
+      background-image: none;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+      display: relative !important;
+
+      .srs {
+        z-index: 100 !important;
+        width: auto;
+        top: 8px !important;
+        left: 70% !important;
+
+        @media screen and (min-width: 768px) {
+          top: 24px !important;
+        }
+
+        .srs-up,
+        .srs-down {
+          background-color: transparent !important;
+        }
+      }
+    }
+
+    #answer-form {
+      fieldset {
+        padding: 0 !important;
+        input {
+          box-shadow: var(--shadow-2), var(--shadow-5) !important;
+          padding: 0 !important;
+          color: var(--grey-1) !important;
+        }
+
+        button {
+          @include button;
+          top: 0px;
+          box-shadow: none !important;
+          background-color: transparent !important;
+          border-radius: 0px !important;
+        }
+
+        &.incorrect {
+          input[type="text"]:disabled {
+            text-shadow: none !important;
+            background-color: var(--red-2) !important;
+          }
+        }
+        &.correct {
+          input[type="text"]:disabled {
+            text-shadow: none !important;
+            background-color: var(--green-1) !important;
+          }
+        }
+      }
+    }
+  }
+
+  #additional-content {
+    background-color: var(--grey-4) !important;
+    box-shadow: var(--shadow-5) !important;
+    height: 50px !important;
+    margin: 0 !important;
+
+    ul {
+      align-items: center !important;
+      display: flex !important;
+      height: 100% !important;
+
+      li {
+        color: var(--grey-1) !important;
+        span {
+          box-shadow: none;
+          background-color: var(--grey-4) !important;
+
+          &:hover,
+          &:focus {
+            &:before {
+              box-shadow: none !important;
+              background-color: var(--grey-4) !important;
+              color: var(--grey-1) !important;
+            }
+          }
+        }
+
+        &.active:before {
+          border-color: transparent transparent var(--grey-3) transparent;
+          bottom: -22px;
+
+          @media screen and (min-width: 768px) {
+            bottom: -15px;
+          }
+        }
+      }
+    }
+  }
+
+  #information {
+    #kana-chart {
+      ol {
+        border-bottom-color: var(--grey-4) !important;
+
+        li {
+          border-bottom-color: transparent !important;
+
+          &:hover {
+            background-color: var(--grey-2) !important;
+          }
+
+          &.active {
+            background-color: var(--grey-4) !important;
+          }
+        }
+      }
+
+      ul {
+        li {
+          border-right-color: var(--grey-4);
+          color: var(--grey-1) !important;
+
+          &:hover,
+          &:active {
+            background-color: var(--grey-2) !important;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+    #last-items {
+      li {
+        color: var(--grey-1) !important;
+
+        [lang="ja"]:first-child {
+          color: var(--grey-3) !important;
+        }
+
+        &[class*="radical"] [lang="ja"]:first-child {
+          background-color: var(--blue-1) !important;
+        }
+
+        &[class*="kanji"] [lang="ja"]:first-child {
+          background-color: var(--yellow-1) !important;
+        }
+
+        &[class*="vocabulary"] [lang="ja"]:first-child {
+          background-color: var(--green-1) !important;
+        }
+
+        ul {
+          background-color: var(--grey-4) !important;
+        }
+      }
+    }
+  }
+
+  #answer-exception span {
+    background-color: var(--grey-5) !important;
+    box-shadow: var(--shadow-1) !important;
+    border-radius: 5px;
+
+    &:before {
+      border-color: transparent transparent var(--grey-5) transparent;
+    }
+  }
+}

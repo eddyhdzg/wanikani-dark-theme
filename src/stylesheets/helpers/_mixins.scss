@@ -12,4 +12,13 @@
   border-radius: 5px !important;
   transition: box-shadow linear 0.2s, border linear 0.2s !important;
   transition-property: box-shadow, border !important;
+  outline: none !important;
+
+  &:hover {
+    box-shadow: 0px 0 0px 2px var(--white-10) !important;
+  }
+
+  &:focus {
+    box-shadow: 0px 0 0px 2px var(--white-30) !important;
+  }
 }
