@@ -1,0 +1,105 @@
+#lessons-summary,
+#reviews-summary {
+  header {
+    box-shadow: none !important;
+    background-color: transparent !important;
+    nav {
+      border-bottom-color: var(--grey-5) !important;
+
+      #back-dashboard {
+        background-color: var(--grey-2) !important;
+        box-shadow: var(--shadow-1) !important;
+        border-radius: 5px !important;
+      }
+
+      #start-session {
+        a {
+          color: var(--grey-3) !important;
+          background-color: var(--green-1) !important;
+          &.disabled {
+            color: var(--grey-1) !important;
+            background-color: var(--grey-3) !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+#reviews-summary {
+  li {
+    box-shadow: var(--shadow-1) !important;
+    border-radius: 5px !important;
+
+    a {
+      color: var(--grey-3) !important;
+    }
+
+    &.radical {
+      background-color: var(--blue-1) !important;
+    }
+
+    &.kanji {
+      background-color: var(--yellow-1) !important;
+    }
+
+    &.vocabulary {
+      background-color: var(--green-1) !important;
+    }
+  }
+
+  #review-stats,
+  #incorrect,
+  #correct {
+    @include box;
+    border-radius: 5px !important;
+  }
+
+  #review-stats {
+    > div {
+      > div {
+        background-color: transparent !important;
+        box-shadow: none !important;
+      }
+    }
+
+    #review-stats-answered-correctly {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  #incorrect {
+    h2 {
+      color: var(--red-2) !important;
+    }
+  }
+
+  #correct {
+    h2 {
+      color: var(--green-1) !important;
+    }
+  }
+
+  #incorrect,
+  #correct {
+    h2 {
+      background-color: var(--grey-2) !important;
+      box-shadow: var(--shadow-5) !important;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    h3 {
+      border-bottom-color: var(--grey-5) !important;
+      span {
+        background-color: var(--grey-3) !important;
+        strong {
+          color: var(--grey-1) !important;
+          background-color: transparent !important;
+        }
+      }
+    }
+  }
+}

@@ -59,12 +59,17 @@
 }
 
 #information,
-.system-alert {
+.system-alert,
+.alert-info {
   background-color: var(--grey-3) !important;
   background-image: none !important;
   box-shadow: var(--shadow-1) !important;
   border-color: transparent !important;
   border-radius: 5px !important;
+}
+
+.reviews-alert:before {
+  background-color: var(--grey-3) !important;
 }
 
 body {
@@ -314,19 +319,78 @@ button {
   background-color: var(--green-1) !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-i,
-a,
-span,
-p,
-time,
-div {
-  text-shadow: none !important;
+html {
+  scrollbar-face-color: var(--grey-5);
+  scrollbar-base-color: var(--grey-5);
+  scrollbar-3dlight-color: var(--grey-5);
+  scrollbar-highlight-color: var(--grey-5);
+  scrollbar-track-color: var(--grey-2);
+  scrollbar-arrow-color: var(--grey-2);
+  scrollbar-shadow-color: var(--grey-5);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: var(--grey-5);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--grey-5);
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--grey-2);
+}
+
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: var(--grey-5);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: var(--grey-5);
+}
+
+::-webkit-resizer {
+  background-color: var(--grey-5);
+}
+
+#search-bar .search-results ul[class*=character-grid] {
+  background-color: var(--grey-2) !important;
+  border-radius: 5px !important;
+  box-shadow: var(--shadow-2) !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  padding: 5px !important;
+}
+#search-bar .search-results ul,
+#search-bar .search-results li,
+#search-bar .search-results span.character {
+  color: var(--grey-3) !important;
+}
+#search-bar .search-results li.character-item {
+  background-image: none !important;
+  border-radius: 5px !important;
+  box-shadow: var(--shadow-1) !important;
+  margin: 5px !important;
+}
+#search-bar .search-results li.character-item[class^=radical] {
+  background-color: var(--blue-1) !important;
+  border-color: var(--blue-1) !important;
+}
+#search-bar .search-results li.character-item[class^=kanji] {
+  background-color: var(--yellow-1) !important;
+  border-color: var(--yellow-1) !important;
+}
+#search-bar .search-results li.character-item[class^=vocabulary] {
+  background-color: var(--green-1) !important;
+  border-color: var(--green-1) !important;
 }
 
 h1,
@@ -339,7 +403,12 @@ i,
 a,
 span,
 p,
-time {
+time,
+input,
+textarea,
+li,
+div {
+  text-shadow: none !important;
   color: var(--grey-1) !important;
 }
 
@@ -388,15 +457,14 @@ time {
   color: var(--grey-3) !important;
 }
 .dashboard-progress .progress-entry a {
-  color: var(--grey-3) !important;
   box-shadow: var(--shadow-1) !important;
 }
-.dashboard-progress .progress-entry a.radical-icon div,
-.dashboard-progress .progress-entry a.kanji-icon div {
+.dashboard-progress .progress-entry a div {
   border-radius: 4px;
+  color: var(--grey-3) !important;
 }
 .dashboard-progress .progress-entry a.radical-icon div {
-  background-image: linear-gradient(to bottom, var(--blue-2), var(--blue-1));
+  background-color: var(--blue-1) !important;
 }
 .dashboard-progress .progress-entry a.kanji-icon div {
   background-color: var(--yellow-1) !important;
@@ -552,6 +620,90 @@ time {
   box-shadow: var(--shadow-4) !important;
 }
 
+#lessons-summary header,
+#reviews-summary header {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+#lessons-summary header nav,
+#reviews-summary header nav {
+  border-bottom-color: var(--grey-5) !important;
+}
+#lessons-summary header nav #back-dashboard,
+#reviews-summary header nav #back-dashboard {
+  background-color: var(--grey-2) !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+}
+#lessons-summary header nav #start-session a,
+#reviews-summary header nav #start-session a {
+  color: var(--grey-3) !important;
+  background-color: var(--green-1) !important;
+}
+#lessons-summary header nav #start-session a.disabled,
+#reviews-summary header nav #start-session a.disabled {
+  color: var(--grey-1) !important;
+  background-color: var(--grey-3) !important;
+}
+
+#reviews-summary li {
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+}
+#reviews-summary li a {
+  color: var(--grey-3) !important;
+}
+#reviews-summary li.radical {
+  background-color: var(--blue-1) !important;
+}
+#reviews-summary li.kanji {
+  background-color: var(--yellow-1) !important;
+}
+#reviews-summary li.vocabulary {
+  background-color: var(--green-1) !important;
+}
+#reviews-summary #review-stats,
+#reviews-summary #incorrect,
+#reviews-summary #correct {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+}
+#reviews-summary #review-stats > div > div {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+#reviews-summary #review-stats #review-stats-answered-correctly::after {
+  display: none;
+}
+#reviews-summary #incorrect h2 {
+  color: var(--red-2) !important;
+}
+#reviews-summary #correct h2 {
+  color: var(--green-1) !important;
+}
+#reviews-summary #incorrect h2,
+#reviews-summary #correct h2 {
+  background-color: var(--grey-2) !important;
+  box-shadow: var(--shadow-5) !important;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#reviews-summary #incorrect h3,
+#reviews-summary #correct h3 {
+  border-bottom-color: var(--grey-5) !important;
+}
+#reviews-summary #incorrect h3 span,
+#reviews-summary #correct h3 span {
+  background-color: var(--grey-3) !important;
+}
+#reviews-summary #incorrect h3 span strong,
+#reviews-summary #correct h3 span strong {
+  color: var(--grey-1) !important;
+  background-color: transparent !important;
+}
+
 #screen-quiz-ready ul.btn-set li#quiz-ready-read-lessons {
   border-color: var(--grey-5);
 }
@@ -617,13 +769,13 @@ time {
   background-image: none !important;
   box-shadow: var(--shadow-1) !important;
 }
-#lessons #main-info.radical {
+#lessons #main-info.radical #character {
   color: var(--blue-1) !important;
 }
-#lessons #main-info.kanji {
+#lessons #main-info.kanji #character {
   color: var(--yellow-1) !important;
 }
-#lessons #main-info.vocabulary {
+#lessons #main-info.vocabulary #character {
   color: var(--green-1) !important;
 }
 #lessons #supplement-nav {
@@ -700,13 +852,54 @@ time {
   box-shadow: 0px 0 0px 2px var(--white-30) !important;
 }
 
-#reviews #question #stats {
+#reviews .user-synonyms .user-synonyms-add-btn::before {
+  background-color: transparent;
+}
+#reviews .user-synonyms input {
+  padding-left: 5px !important;
+  border-radius: 5px !important;
+}
+#reviews .user-synonyms button {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+  outline: none !important;
+  padding: 6px !important;
+}
+#reviews .user-synonyms button:hover {
+  box-shadow: 0px 0 0px 2px var(--white-10) !important;
+}
+#reviews .user-synonyms button:focus {
+  box-shadow: 0px 0 0px 2px var(--white-30) !important;
+}
+#reviews .user-synonyms li::after {
+  background-color: transparent !important;
+}
+
+#lessons {
+  overflow: visible !important;
+}
+
+#reviews #question #stats,
+#reviews #quiz #stats,
+#lessons #question #stats,
+#lessons #quiz #stats {
   color: var(--grey-1) !important;
 }
-#reviews #question #summary-button a i {
+#reviews #question #summary-button a i,
+#reviews #quiz #summary-button a i,
+#lessons #question #summary-button a i,
+#lessons #quiz #summary-button a i {
   color: var(--grey-1) !important;
 }
-#reviews #question #character {
+#reviews #question #character,
+#reviews #quiz #character,
+#lessons #question #character,
+#lessons #quiz #character {
   background-color: var(--grey-3) !important;
   background-image: none !important;
   box-shadow: var(--shadow-1) !important;
@@ -714,46 +907,104 @@ time {
   z-index: 10 !important;
   border-radius: 0px !important;
 }
-#reviews #question #character.radical span {
+#reviews #question #character.radical span,
+#reviews #quiz #character.radical span,
+#lessons #question #character.radical span,
+#lessons #quiz #character.radical span {
   color: var(--blue-1) !important;
 }
-#reviews #question #character.kanji span {
+#reviews #question #character.kanji span,
+#reviews #quiz #character.kanji span,
+#lessons #question #character.kanji span,
+#lessons #quiz #character.kanji span {
   color: var(--yellow-1) !important;
 }
-#reviews #question #character.vocabulary span {
+#reviews #question #character.vocabulary span,
+#reviews #quiz #character.vocabulary span,
+#lessons #question #character.vocabulary span,
+#lessons #quiz #character.vocabulary span {
   color: var(--green-1) !important;
 }
-#reviews #question #question-type {
+#reviews #question label#question-type,
+#reviews #quiz label#question-type,
+#lessons #question label#question-type,
+#lessons #quiz label#question-type {
+  color: var(--grey-1) !important;
+  text-shadow: none !important;
+}
+#reviews #question #question-type,
+#reviews #quiz #question-type,
+#lessons #question #question-type,
+#lessons #quiz #question-type {
   background-color: var(--grey-4) !important;
   background-image: none;
   border-top-color: transparent;
   border-bottom-color: transparent;
   display: relative !important;
 }
-#reviews #question #question-type .srs {
+#reviews #question #question-type .srs,
+#reviews #quiz #question-type .srs,
+#lessons #question #question-type .srs,
+#lessons #quiz #question-type .srs {
   z-index: 100 !important;
   width: auto;
   top: 8px !important;
   left: 70% !important;
 }
 @media screen and (min-width: 768px) {
-  #reviews #question #question-type .srs {
+  #reviews #question #question-type .srs,
+#reviews #quiz #question-type .srs,
+#lessons #question #question-type .srs,
+#lessons #quiz #question-type .srs {
     top: 24px !important;
   }
 }
 #reviews #question #question-type .srs .srs-up,
-#reviews #question #question-type .srs .srs-down {
+#reviews #question #question-type .srs .srs-down,
+#reviews #quiz #question-type .srs .srs-up,
+#reviews #quiz #question-type .srs .srs-down,
+#lessons #question #question-type .srs .srs-up,
+#lessons #question #question-type .srs .srs-down,
+#lessons #quiz #question-type .srs .srs-up,
+#lessons #quiz #question-type .srs .srs-down {
   background-color: transparent !important;
 }
-#reviews #question #answer-form fieldset {
+#reviews #question #question-type .srs .srs-up,
+#reviews #quiz #question-type .srs .srs-up,
+#lessons #question #question-type .srs .srs-up,
+#lessons #quiz #question-type .srs .srs-up {
+  color: var(--green-1) !important;
+}
+#reviews #question #question-type .srs .srs-down,
+#reviews #quiz #question-type .srs .srs-down,
+#lessons #question #question-type .srs .srs-down,
+#lessons #quiz #question-type .srs .srs-down {
+  color: var(--red-2) !important;
+}
+#reviews #question #answer-form,
+#reviews #quiz #answer-form,
+#lessons #question #answer-form,
+#lessons #quiz #answer-form {
+  position: relative !important;
+}
+#reviews #question #answer-form fieldset,
+#reviews #quiz #answer-form fieldset,
+#lessons #question #answer-form fieldset,
+#lessons #quiz #answer-form fieldset {
   padding: 0 !important;
 }
-#reviews #question #answer-form fieldset input {
+#reviews #question #answer-form fieldset input,
+#reviews #quiz #answer-form fieldset input,
+#lessons #question #answer-form fieldset input,
+#lessons #quiz #answer-form fieldset input {
   box-shadow: var(--shadow-2), var(--shadow-5) !important;
   padding: 0 !important;
   color: var(--grey-1) !important;
 }
-#reviews #question #answer-form fieldset button {
+#reviews #question #answer-form fieldset button,
+#reviews #quiz #answer-form fieldset button,
+#lessons #question #answer-form fieldset button,
+#lessons #quiz #answer-form fieldset button {
   background-color: var(--grey-2) !important;
   background-image: none !important;
   box-shadow: var(--shadow-1) !important;
@@ -767,97 +1018,176 @@ time {
   background-color: transparent !important;
   border-radius: 0px !important;
 }
-#reviews #question #answer-form fieldset button:hover {
+#reviews #question #answer-form fieldset button:hover,
+#reviews #quiz #answer-form fieldset button:hover,
+#lessons #question #answer-form fieldset button:hover,
+#lessons #quiz #answer-form fieldset button:hover {
   box-shadow: 0px 0 0px 2px var(--white-10) !important;
 }
-#reviews #question #answer-form fieldset button:focus {
+#reviews #question #answer-form fieldset button:focus,
+#reviews #quiz #answer-form fieldset button:focus,
+#lessons #question #answer-form fieldset button:focus,
+#lessons #quiz #answer-form fieldset button:focus {
   box-shadow: 0px 0 0px 2px var(--white-30) !important;
 }
-#reviews #question #answer-form fieldset.incorrect input[type=text]:disabled {
-  text-shadow: none !important;
+#reviews #question #answer-form fieldset.incorrect input[type=text]:disabled,
+#reviews #quiz #answer-form fieldset.incorrect input[type=text]:disabled,
+#lessons #question #answer-form fieldset.incorrect input[type=text]:disabled,
+#lessons #quiz #answer-form fieldset.incorrect input[type=text]:disabled {
   background-color: var(--red-2) !important;
 }
-#reviews #question #answer-form fieldset.correct input[type=text]:disabled {
-  text-shadow: none !important;
+#reviews #question #answer-form fieldset.correct input[type=text]:disabled,
+#reviews #quiz #answer-form fieldset.correct input[type=text]:disabled,
+#lessons #question #answer-form fieldset.correct input[type=text]:disabled,
+#lessons #quiz #answer-form fieldset.correct input[type=text]:disabled {
   background-color: var(--green-1) !important;
 }
-#reviews #additional-content {
+#reviews #additional-content,
+#lessons #additional-content {
   background-color: var(--grey-4) !important;
   box-shadow: var(--shadow-5) !important;
   height: 50px !important;
   margin: 0 !important;
 }
-#reviews #additional-content ul {
+#reviews #additional-content ul,
+#lessons #additional-content ul {
   align-items: center !important;
   display: flex !important;
   height: 100% !important;
 }
-#reviews #additional-content ul li {
+#reviews #additional-content ul li,
+#lessons #additional-content ul li {
   color: var(--grey-1) !important;
 }
-#reviews #additional-content ul li span {
+#reviews #additional-content ul li span,
+#lessons #additional-content ul li span {
   box-shadow: none;
   background-color: var(--grey-4) !important;
 }
-#reviews #additional-content ul li span:hover:before, #reviews #additional-content ul li span:focus:before {
+#reviews #additional-content ul li span:hover:before, #reviews #additional-content ul li span:focus:before,
+#lessons #additional-content ul li span:hover:before,
+#lessons #additional-content ul li span:focus:before {
   box-shadow: none !important;
   background-color: var(--grey-4) !important;
   color: var(--grey-1) !important;
 }
-#reviews #additional-content ul li.active:before {
+#reviews #additional-content ul li.active:before,
+#lessons #additional-content ul li.active:before {
   border-color: transparent transparent var(--grey-3) transparent;
-  bottom: -22px;
+  bottom: -25px !important;
 }
-@media screen and (min-width: 768px) {
-  #reviews #additional-content ul li.active:before {
-    bottom: -15px;
-  }
-}
-#reviews #information #kana-chart ol {
+#reviews #information #kana-chart ol,
+#lessons #information #kana-chart ol {
   border-bottom-color: var(--grey-4) !important;
 }
-#reviews #information #kana-chart ol li {
+#reviews #information #kana-chart ol li,
+#lessons #information #kana-chart ol li {
   border-bottom-color: transparent !important;
 }
-#reviews #information #kana-chart ol li:hover {
+#reviews #information #kana-chart ol li:hover,
+#lessons #information #kana-chart ol li:hover {
   background-color: var(--grey-2) !important;
 }
-#reviews #information #kana-chart ol li.active {
+#reviews #information #kana-chart ol li.active,
+#lessons #information #kana-chart ol li.active {
   background-color: var(--grey-4) !important;
 }
-#reviews #information #kana-chart ul li {
+#reviews #information #kana-chart ul li,
+#lessons #information #kana-chart ul li {
   border-right-color: var(--grey-4);
   color: var(--grey-1) !important;
 }
-#reviews #information #kana-chart ul li:hover, #reviews #information #kana-chart ul li:active {
+#reviews #information #kana-chart ul li:hover, #reviews #information #kana-chart ul li:active,
+#lessons #information #kana-chart ul li:hover,
+#lessons #information #kana-chart ul li:active {
   background-color: var(--grey-2) !important;
   box-shadow: none;
 }
-#reviews #information #last-items li {
+#reviews #information #last-items li,
+#lessons #information #last-items li {
   color: var(--grey-1) !important;
 }
-#reviews #information #last-items li [lang=ja]:first-child {
+#reviews #information #last-items li [lang=ja]:first-child,
+#lessons #information #last-items li [lang=ja]:first-child {
   color: var(--grey-3) !important;
 }
-#reviews #information #last-items li[class*=radical] [lang=ja]:first-child {
+#reviews #information #last-items li[class*=radical] [lang=ja]:first-child,
+#lessons #information #last-items li[class*=radical] [lang=ja]:first-child {
   background-color: var(--blue-1) !important;
 }
-#reviews #information #last-items li[class*=kanji] [lang=ja]:first-child {
+#reviews #information #last-items li[class*=kanji] [lang=ja]:first-child,
+#lessons #information #last-items li[class*=kanji] [lang=ja]:first-child {
   background-color: var(--yellow-1) !important;
 }
-#reviews #information #last-items li[class*=vocabulary] [lang=ja]:first-child {
+#reviews #information #last-items li[class*=vocabulary] [lang=ja]:first-child,
+#lessons #information #last-items li[class*=vocabulary] [lang=ja]:first-child {
   background-color: var(--green-1) !important;
 }
-#reviews #information #last-items li ul {
+#reviews #information #last-items li ul,
+#lessons #information #last-items li ul {
   background-color: var(--grey-4) !important;
 }
-#reviews #answer-exception span {
+#reviews #information #item-info h2,
+#lessons #information #item-info h2 {
+  border-bottom-color: var(--grey-5) !important;
+}
+#reviews #information #item-info #related-items span,
+#lessons #information #item-info #related-items span {
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-3) !important;
+}
+#reviews #information #item-info #related-items span.radical,
+#lessons #information #item-info #related-items span.radical {
+  background-color: var(--blue-1) !important;
+}
+#reviews #information #item-info #related-items span.kanji,
+#lessons #information #item-info #related-items span.kanji {
+  background-color: var(--yellow-1) !important;
+}
+#reviews #information #item-info #related-items span.vocabulary,
+#lessons #information #item-info #related-items span.vocabulary {
+  background-color: var(--green-1) !important;
+}
+#reviews #information #item-info #note-meaning fieldset,
+#lessons #information #item-info #note-meaning fieldset {
+  background-color: transparent !important;
+}
+#reviews #information #item-info #note-meaning textarea,
+#lessons #information #item-info #note-meaning textarea {
+  border-radius: 5px !important;
+}
+#reviews #information #item-info #note-meaning button,
+#lessons #information #item-info #note-meaning button {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+  outline: none !important;
+}
+#reviews #information #item-info #note-meaning button:hover,
+#lessons #information #item-info #note-meaning button:hover {
+  box-shadow: 0px 0 0px 2px var(--white-10) !important;
+}
+#reviews #information #item-info #note-meaning button:focus,
+#lessons #information #item-info #note-meaning button:focus {
+  box-shadow: 0px 0 0px 2px var(--white-30) !important;
+}
+#reviews #answer-exception span,
+#lessons #answer-exception span {
   background-color: var(--grey-5) !important;
   box-shadow: var(--shadow-1) !important;
   border-radius: 5px;
 }
-#reviews #answer-exception span:before {
+#reviews #answer-exception span:before,
+#lessons #answer-exception span:before {
   border-color: transparent transparent var(--grey-5) transparent;
+}
+
+#lightning-mode.active {
+  color: white !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

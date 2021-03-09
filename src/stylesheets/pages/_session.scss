@@ -1,5 +1,34 @@
 #reviews {
-  #question {
+  .user-synonyms {
+    .user-synonyms-add-btn {
+      &::before {
+        background-color: transparent;
+      }
+    }
+    input {
+      padding-left: 5px !important;
+      border-radius: 5px !important;
+    }
+
+    button {
+      @include button;
+      padding: 6px !important;
+    }
+
+    li::after {
+      background-color: transparent !important;
+    }
+  }
+}
+
+#lessons {
+  overflow: visible !important;
+}
+
+#reviews,
+#lessons {
+  #question,
+  #quiz {
     #stats {
       color: var(--grey-1) !important;
     }
@@ -36,6 +65,11 @@
       }
     }
 
+    label#question-type {
+      color: var(--grey-1) !important;
+      text-shadow: none !important;
+    }
+
     #question-type {
       background-color: var(--grey-4) !important;
       background-image: none;
@@ -57,10 +91,19 @@
         .srs-down {
           background-color: transparent !important;
         }
+
+        .srs-up {
+          color: var(--green-1) !important;
+        }
+
+        .srs-down {
+          color: var(--red-2) !important;
+        }
       }
     }
 
     #answer-form {
+      position: relative !important;
       fieldset {
         padding: 0 !important;
         input {
@@ -79,13 +122,11 @@
 
         &.incorrect {
           input[type="text"]:disabled {
-            text-shadow: none !important;
             background-color: var(--red-2) !important;
           }
         }
         &.correct {
           input[type="text"]:disabled {
-            text-shadow: none !important;
             background-color: var(--green-1) !important;
           }
         }
@@ -122,11 +163,7 @@
 
         &.active:before {
           border-color: transparent transparent var(--grey-3) transparent;
-          bottom: -22px;
-
-          @media screen and (min-width: 768px) {
-            bottom: -15px;
-          }
+          bottom: -25px !important;
         }
       }
     }
@@ -186,6 +223,44 @@
 
         ul {
           background-color: var(--grey-4) !important;
+        }
+      }
+    }
+
+    #item-info {
+      h2 {
+        border-bottom-color: var(--grey-5) !important;
+      }
+
+      #related-items {
+        span {
+          box-shadow: var(--shadow-1) !important;
+          color: var(--grey-3) !important;
+
+          &.radical {
+            background-color: var(--blue-1) !important;
+          }
+
+          &.kanji {
+            background-color: var(--yellow-1) !important;
+          }
+
+          &.vocabulary {
+            background-color: var(--green-1) !important;
+          }
+        }
+      }
+
+      #note-meaning {
+        fieldset {
+          background-color: transparent !important;
+        }
+        textarea {
+          border-radius: 5px !important;
+        }
+
+        button {
+          @include button;
         }
       }
     }

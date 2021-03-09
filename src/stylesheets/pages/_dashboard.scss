@@ -59,24 +59,20 @@
     color: var(--grey-3) !important;
 
     a {
-      color: var(--grey-3) !important;
       box-shadow: var(--shadow-1) !important;
-    }
 
-    a.radical-icon div,
-    a.kanji-icon div {
-      border-radius: 4px;
-    }
+      div {
+        border-radius: 4px;
+        color: var(--grey-3) !important;
+      }
 
-    a.radical-icon div {
-      background-image: linear-gradient(
-        to bottom,
-        var(--blue-2),
-        var(--blue-1)
-      );
-    }
-    a.kanji-icon div {
-      background-color: var(--yellow-1) !important;
+      &.radical-icon div {
+        background-color: var(--blue-1) !important;
+      }
+
+      &.kanji-icon div {
+        background-color: var(--yellow-1) !important;
+      }
     }
   }
 }

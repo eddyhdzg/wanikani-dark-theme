@@ -1,0 +1,39 @@
+#search-bar .search-results {
+  ul[class*="character-grid"] {
+    background-color: var(--grey-2) !important;
+    border-radius: 5px !important;
+    box-shadow: var(--shadow-2) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    padding: 5px !important;
+  }
+
+  ul,
+  li,
+  span.character {
+    color: var(--grey-3) !important;
+  }
+
+  li.character-item {
+    background-image: none !important;
+    border-radius: 5px !important;
+    box-shadow: var(--shadow-1) !important;
+    margin: 5px !important;
+
+    &[class^="radical"] {
+      background-color: var(--blue-1) !important;
+      border-color: var(--blue-1) !important;
+    }
+
+    &[class^="kanji"] {
+      background-color: var(--yellow-1) !important;
+      border-color: var(--yellow-1) !important;
+    }
+
+    &[class^="vocabulary"] {
+      background-color: var(--green-1) !important;
+      border-color: var(--green-1) !important;
+    }
+  }
+}

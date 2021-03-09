@@ -1,6 +1,11 @@
 #information,
-.system-alert {
+.system-alert,
+.alert-info {
   @include box;
   border-color: transparent !important;
   border-radius: 5px !important;
+}
+
+.reviews-alert:before {
+  background-color: var(--grey-3) !important;
 }

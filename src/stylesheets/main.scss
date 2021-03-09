@@ -11,10 +11,15 @@
 @import "components/input";
 @import "components/loading";
 @import "components/popover";
-// @import "components/scrollbar";
+@import "components/scrollbar";
+@import "components/search-bar";
 @import "components/text";
 
 // ### Pages ###
 @import "pages/dashboard";
+@import "pages/lesson";
 @import "pages/lessons";
-@import "pages/reviews";
+@import "pages/session";
+
+// ### Extensions
+@import "extensions/lightning-mode";

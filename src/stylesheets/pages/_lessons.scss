@@ -39,15 +39,21 @@
     @include box;
 
     &.radical {
-      color: var(--blue-1) !important;
+      #character {
+        color: var(--blue-1) !important;
+      }
     }
 
     &.kanji {
-      color: var(--yellow-1) !important;
+      #character {
+        color: var(--yellow-1) !important;
+      }
     }
 
     &.vocabulary {
-      color: var(--green-1) !important;
+      #character {
+        color: var(--green-1) !important;
+      }
     }
   }
 
