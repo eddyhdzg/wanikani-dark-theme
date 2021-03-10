@@ -1,12 +1,14 @@
-.dashboard-progress,
-.forecast,
-#apprentice,
-#guru,
-#master,
-#enlightened,
-#burned,
-.dashboard-sub-section {
-  @include box;
+.dashboard {
+  .dashboard-progress,
+  .forecast,
+  #apprentice,
+  #guru,
+  #master,
+  #enlightened,
+  #burned,
+  .dashboard-sub-section {
+    @include box;
+  }
 }
 
 // ### Section 1 ###

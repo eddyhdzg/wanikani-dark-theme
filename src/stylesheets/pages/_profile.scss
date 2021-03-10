@@ -1,0 +1,60 @@
+.user-info {
+  background-image: none !important;
+  background-color: var(--grey-3) !important;
+  box-shadow: var(--shadow-5) !important;
+}
+
+#public-profile .public-profile-header div.avatar {
+  border-color: var(--grey-3) !important;
+}
+
+.knowledge-distribution {
+  .srs-levels {
+    li {
+      box-shadow: none !important;
+      background-color: transparent !important;
+      span {
+        background-color: transparent !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.wall-of-shame {
+  background-color: transparent !important;
+  h3 {
+    > span {
+      background-color: var(--grey-3) !important;
+      box-shadow: var(--shadow-2) !important;
+    }
+  }
+
+  span {
+    &[class*="-icon"] {
+      background-image: none !important;
+      box-shadow: var(--shadow-1) !important;
+      border-radius: 5px !important;
+      color: var(--grey-3) !important;
+    }
+
+    &.radical-icon {
+      background-color: var(--blue-1) !important;
+    }
+    &.kanji-icon {
+      background-color: var(--yellow-1) !important;
+    }
+
+    &.vocabulary-icon {
+      background-color: var(--green-1) !important;
+    }
+  }
+}
+
+[class*="kanji"] .progress > .bar {
+  background-color: var(--yellow-1) !important;
+}
+
+[class*="vocabulary"] .progress > .bar {
+  background-color: var(--green-1) !important;
+}

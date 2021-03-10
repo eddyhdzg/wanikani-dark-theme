@@ -1,0 +1,33 @@
+section.settings-section {
+  @include box;
+  border-color: transparent !important;
+  border-radius: 5px !important;
+
+  hr {
+    border-color: var(--grey-5) !important;
+  }
+
+  select,
+  button {
+    @include button;
+    border-color: transparent !important;
+  }
+
+  #personal-access-tokens-list {
+    code {
+      color: var(--red-2) !important;
+      background-color: var(--grey-4) !important;
+      border-color: transparent !important;
+    }
+  }
+
+  .btn {
+    @include button;
+    border-color: transparent !important;
+
+    &.btn-danger {
+      color: var(--grey-3) !important;
+      background-color: var(--red-1) !important;
+    }
+  }
+}

@@ -103,3 +103,17 @@
     }
   }
 }
+
+#lessons-summary {
+  #radicals,
+  #kanji,
+  #vocabulary {
+    @include box;
+    border-color: transparent !important;
+    border-radius: 5px !important;
+
+    h2 {
+      background-color: transparent !important;
+    }
+  }
+}

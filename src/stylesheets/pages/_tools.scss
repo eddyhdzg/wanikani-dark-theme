@@ -1,0 +1,8 @@
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: var(--grey-3) !important;
+}
+
+.dorc-form-button-wrapper {
+  background-color: var(--grey-4) !important;
+}

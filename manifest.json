@@ -3,15 +3,18 @@
   "short_name": "Wanikani Dark",
   "version": "0.1.0",
   "icons": {
-    "16": "icons/wanikani-light16.png",
-    "48": "icons/wanikani-light48.png",
-    "128": "icons/wanikani-light128.png"
+    "16": "icons/wanikani16.png",
+    "48": "icons/wanikani48.png",
+    "128": "icons/wanikani128.png"
   },
   "content_scripts": [
     {
       "css": ["styles.css"],
       "matches": ["*://*.wanikani.com/*"],
-      "exclude_matches": ["*://community.wanikani.com/*"]
+      "exclude_matches": [
+        "*://community.wanikani.com/*",
+        "*://knowledge.wanikani.com/*"
+      ]
     }
   ],
   "manifest_version": 2

@@ -1,0 +1,32 @@
+.account-subscription-plans {
+  .span4 {
+    @include box;
+    button {
+      border-color: transparent !important;
+      border-radius: 5px !important;
+      background-color: transparent !important;
+      border-color: transparent !important;
+      margin-bottom: 0px !important;
+
+      &.account-subscription-plan.account-subscription-plan-active {
+        border-color: var(--grey-1) !important;
+      }
+    }
+  }
+}
+
+.account-subscription-promo,
+.account-subscription-payment {
+  button {
+    @include box;
+    border-color: transparent !important;
+  }
+}
+
+.account-subscription-payment-submit {
+  button {
+    @include box;
+    background-color: var(--yellow-1) !important;
+    color: var(--grey-3) !important;
+  }
+}

@@ -16,13 +16,17 @@
 @import "components/text";
 
 // ### Pages ###
+@import "pages/account";
 @import "pages/contact";
 @import "pages/dashboard";
 @import "pages/info";
 @import "pages/lesson";
 @import "pages/lessons";
 @import "pages/level";
+@import "pages/profile";
 @import "pages/session";
+@import "pages/settings_app";
+@import "pages/tools";
 
 // ### Extensions
 @import "extensions/lightning-mode";

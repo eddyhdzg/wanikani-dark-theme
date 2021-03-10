@@ -372,11 +372,45 @@ p,
 time,
 input,
 textarea,
+button,
+select,
 li,
 td,
 div {
   text-shadow: none !important;
   color: var(--grey-1) !important;
+}
+
+.account-subscription-plans .span4 {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+}
+.account-subscription-plans .span4 button {
+  border-color: transparent !important;
+  border-radius: 5px !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+  margin-bottom: 0px !important;
+}
+.account-subscription-plans .span4 button.account-subscription-plan.account-subscription-plan-active {
+  border-color: var(--grey-1) !important;
+}
+
+.account-subscription-promo button,
+.account-subscription-payment button {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-color: transparent !important;
+}
+
+.account-subscription-payment-submit button {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  background-color: var(--yellow-1) !important;
+  color: var(--grey-3) !important;
 }
 
 hr {
@@ -400,14 +434,14 @@ hr {
   box-shadow: 0px 0 0px 2px var(--white-30) !important;
 }
 
-.dashboard-progress,
-.forecast,
-#apprentice,
-#guru,
-#master,
-#enlightened,
-#burned,
-.dashboard-sub-section {
+.dashboard .dashboard-progress,
+.dashboard .forecast,
+.dashboard #apprentice,
+.dashboard #guru,
+.dashboard #master,
+.dashboard #enlightened,
+.dashboard #burned,
+.dashboard .dashboard-sub-section {
   background-color: var(--grey-3) !important;
   background-image: none !important;
   box-shadow: var(--shadow-1) !important;
@@ -792,6 +826,21 @@ section#progress .resurrect-btn:focus {
   background-color: transparent !important;
 }
 
+#lessons-summary #radicals,
+#lessons-summary #kanji,
+#lessons-summary #vocabulary {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-color: transparent !important;
+  border-radius: 5px !important;
+}
+#lessons-summary #radicals h2,
+#lessons-summary #kanji h2,
+#lessons-summary #vocabulary h2 {
+  background-color: transparent !important;
+}
+
 #screen-quiz-ready ul.btn-set li#quiz-ready-read-lessons {
   border-color: var(--grey-5);
 }
@@ -1076,6 +1125,56 @@ section[id^=level-] header {
 }
 .progress > .bar span::after {
   border-top-color: var(--grey-5) !important;
+}
+
+.user-info {
+  background-image: none !important;
+  background-color: var(--grey-3) !important;
+  box-shadow: var(--shadow-5) !important;
+}
+
+#public-profile .public-profile-header div.avatar {
+  border-color: var(--grey-3) !important;
+}
+
+.knowledge-distribution .srs-levels li {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+.knowledge-distribution .srs-levels li span {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.wall-of-shame {
+  background-color: transparent !important;
+}
+.wall-of-shame h3 > span {
+  background-color: var(--grey-3) !important;
+  box-shadow: var(--shadow-2) !important;
+}
+.wall-of-shame span[class*=-icon] {
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+  color: var(--grey-3) !important;
+}
+.wall-of-shame span.radical-icon {
+  background-color: var(--blue-1) !important;
+}
+.wall-of-shame span.kanji-icon {
+  background-color: var(--yellow-1) !important;
+}
+.wall-of-shame span.vocabulary-icon {
+  background-color: var(--green-1) !important;
+}
+
+[class*=kanji] .progress > .bar {
+  background-color: var(--yellow-1) !important;
+}
+
+[class*=vocabulary] .progress > .bar {
+  background-color: var(--green-1) !important;
 }
 
 #reviews .user-synonyms .user-synonyms-add-btn::before {
@@ -1412,6 +1511,72 @@ section[id^=level-] header {
 #note-meaning button:focus,
 #note-reading button:focus {
   box-shadow: 0px 0 0px 2px var(--white-30) !important;
+}
+
+section.settings-section {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-color: transparent !important;
+  border-radius: 5px !important;
+}
+section.settings-section hr {
+  border-color: var(--grey-5) !important;
+}
+section.settings-section select,
+section.settings-section button {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+  outline: none !important;
+  border-color: transparent !important;
+}
+section.settings-section select:hover,
+section.settings-section button:hover {
+  box-shadow: 0px 0 0px 2px var(--white-10) !important;
+}
+section.settings-section select:focus,
+section.settings-section button:focus {
+  box-shadow: 0px 0 0px 2px var(--white-30) !important;
+}
+section.settings-section #personal-access-tokens-list code {
+  color: var(--red-2) !important;
+  background-color: var(--grey-4) !important;
+  border-color: transparent !important;
+}
+section.settings-section .btn {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+  outline: none !important;
+  border-color: transparent !important;
+}
+section.settings-section .btn:hover {
+  box-shadow: 0px 0 0px 2px var(--white-10) !important;
+}
+section.settings-section .btn:focus {
+  box-shadow: 0px 0 0px 2px var(--white-30) !important;
+}
+section.settings-section .btn.btn-danger {
+  color: var(--grey-3) !important;
+  background-color: var(--red-1) !important;
+}
+
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: var(--grey-3) !important;
+}
+
+.dorc-form-button-wrapper {
+  background-color: var(--grey-4) !important;
 }
 
 #lightning-mode.active {
