@@ -17,17 +17,23 @@
   border-radius: 3px !important;
 }
 
-.highlight-reading {
-  background-color: var(--grey-5) !important;
+[class*=-highlight] {
+  color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: none !important;
 }
-
-.highlight-meaning {
-  background-color: var(--grey-4) !important;
+[class*=-highlight].radical-highlight {
+  background-color: var(--blue-1) !important;
 }
-
-.highlight-reading > span,
-.highlight-meaning > span {
+[class*=-highlight].kanji-highlight {
+  background-color: var(--yellow-1) !important;
+}
+[class*=-highlight].vocabulary-highlight {
+  background-color: var(--green-1) !important;
+}
+[class*=-highlight].reading-highlight {
   color: var(--grey-1) !important;
+  background-color: var(--grey-5) !important;
 }
 
 :root {
@@ -39,6 +45,7 @@
   --blue-1: #3daee9;
   --blue-1-50: #3daee980;
   --blue-2: #0af;
+  --blue-3: #1d99f3;
   --yellow-1: #fdbc4b;
   --yellow-1-50: #fdbc4b80;
   --yellow-2: #c9ce3b;
@@ -166,121 +173,121 @@ footer #report-errors button {
   top: 0.2em !important;
 }
 
-header {
+header.global-header {
   background-color: var(--grey-3) !important;
   background-image: none !important;
   box-shadow: var(--shadow-1) !important;
   border-bottom-color: transparent !important;
 }
-header .logo {
+header.global-header .logo {
   filter: var(--filter) !important;
 }
-header #sitemap {
+header.global-header #sitemap {
   background-color: var(--grey-3);
 }
 @media screen and (min-width: 580px) and (max-width: 1023px) {
-  header .navigation {
+  header.global-header .navigation {
     padding-right: 88px;
   }
 }
-header button {
+header.global-header button {
   background-color: var(--grey-2) !important;
   box-shadow: var(--shadow-1);
 }
-header button:hover, header button:focus {
+header.global-header button:hover, header.global-header button:focus {
   box-shadow: none;
 }
-header button#search__trigger__mobile {
+header.global-header button#search__trigger__mobile {
   margin-right: 16px;
 }
-header button.navigation__toggle {
+header.global-header button.navigation__toggle {
   outline: none !important;
 }
-header button.navigation__toggle:hover {
+header.global-header button.navigation__toggle:hover {
   box-shadow: 0px 0 0px 2px var(--white-10);
 }
-header button.navigation__toggle:focus {
+header.global-header button.navigation__toggle:focus {
   box-shadow: 0px 0 0px 2px var(--white-30);
 }
-header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):hover, header button.navigation__toggle:not(#search__trigger)[data-expanded=true]:hover {
+header.global-header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):hover, header.global-header button.navigation__toggle:not(#search__trigger)[data-expanded=true]:hover {
   border-color: var(--white-10);
 }
-header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):not(#search__trigger):not(#search__trigger__mobile)[data-expanded=true], header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):focus, header button.navigation__toggle:focus {
+header.global-header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):not(#search__trigger):not(#search__trigger__mobile)[data-expanded=true], header.global-header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):focus, header.global-header button.navigation__toggle:focus {
   border-color: var(--white-30);
 }
-header button.sitemap__section-header {
+header.global-header button.sitemap__section-header {
   outline: none;
   border: 2px solid transparent;
 }
-header button.sitemap__section-header--radicals:hover {
+header.global-header button.sitemap__section-header--radicals:hover {
   border-color: var(--blue-1-50) !important;
 }
-header button.sitemap__section-header--radicals[data-expanded=true], header button.sitemap__section-header--radicals:focus {
+header.global-header button.sitemap__section-header--radicals[data-expanded=true], header.global-header button.sitemap__section-header--radicals:focus {
   border-color: var(--blue-1) !important;
 }
-header button.sitemap__section-header--kanji:hover {
+header.global-header button.sitemap__section-header--kanji:hover {
   border-color: var(--yellow-1-50) !important;
 }
-header button.sitemap__section-header--kanji[data-expanded=true], header button.sitemap__section-header--kanji:focus {
+header.global-header button.sitemap__section-header--kanji[data-expanded=true], header.global-header button.sitemap__section-header--kanji:focus {
   border-color: var(--yellow-1) !important;
 }
-header button.sitemap__section-header--vocabulary:hover {
+header.global-header button.sitemap__section-header--vocabulary:hover {
   border-color: var(--green-1-50) !important;
 }
-header button.sitemap__section-header--vocabulary[data-expanded=true], header button.sitemap__section-header--vocabulary:focus {
+header.global-header button.sitemap__section-header--vocabulary[data-expanded=true], header.global-header button.sitemap__section-header--vocabulary:focus {
   border-color: var(--green-1) !important;
 }
-header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):not(#search__trigger):not(#search__trigger__mobile)[data-expanded=true], header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):focus, header button.navigation__toggle:focus {
+header.global-header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):not(#search__trigger):not(#search__trigger__mobile)[data-expanded=true], header.global-header button:not(.sitemap__section-header--radicals):not(.sitemap__section-header--kanji):not(.sitemap__section-header--vocabulary):focus, header.global-header button.navigation__toggle:focus {
   border-color: var(--white-30);
 }
-header .navigation-shortcut a,
-header .navigation-shortcut[data-count="0"] a {
+header.global-header .navigation-shortcut a,
+header.global-header .navigation-shortcut[data-count="0"] a {
   border-color: var(--white-10);
 }
-header .navigation-shortcut a:focus, header .navigation-shortcut a:hover,
-header .navigation-shortcut[data-count="0"] a:focus,
-header .navigation-shortcut[data-count="0"] a:hover {
+header.global-header .navigation-shortcut a:focus, header.global-header .navigation-shortcut a:hover,
+header.global-header .navigation-shortcut[data-count="0"] a:focus,
+header.global-header .navigation-shortcut[data-count="0"] a:hover {
   border-color: var(--white-30);
 }
-header .navigation-shortcut a span,
-header .navigation-shortcut[data-count="0"] a span {
+header.global-header .navigation-shortcut a span,
+header.global-header .navigation-shortcut[data-count="0"] a span {
   background: transparent;
   color: var(--green-1) !important;
   padding-left: 14px;
   padding-right: 0;
   margin-right: 12px;
 }
-header .sitemap--divider {
+header.global-header .sitemap--divider {
   border-top-color: var(--grey-4);
 }
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account) {
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account) {
   background-color: var(--grey-3);
 }
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account)::before {
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account)::before {
   background-color: var(--grey-3);
 }
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--radicals span,
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--radicals a, header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--kanji span,
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--kanji a, header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--vocabulary span,
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--vocabulary a {
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--radicals span,
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--radicals a, header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--kanji span,
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--kanji a, header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--vocabulary span,
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk--vocabulary a {
   color: var(--grey-3) !important;
 }
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--radicals {
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--radicals {
   background-color: var(--blue-1);
 }
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--radicals::before {
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--radicals::before {
   background-color: var(--blue-1);
 }
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--kanji {
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--kanji {
   background-color: var(--yellow-1) !important;
 }
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--kanji::before {
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--kanji::before {
   background-color: var(--yellow-1);
 }
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--vocabulary {
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--vocabulary {
   background-color: var(--green-1) !important;
 }
-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--vocabulary::before {
+header.global-header .sitemap__expandable-chunk:not(.sitemap__expandable-chunk--account).sitemap__expandable-chunk.sitemap__expandable-chunk--vocabulary::before {
   background-color: var(--green-1);
 }
 
@@ -317,47 +324,6 @@ button {
 }
 .popover .popover-content ul li:last-child {
   background-color: var(--green-1) !important;
-}
-
-html {
-  scrollbar-face-color: var(--grey-5);
-  scrollbar-base-color: var(--grey-5);
-  scrollbar-3dlight-color: var(--grey-5);
-  scrollbar-highlight-color: var(--grey-5);
-  scrollbar-track-color: var(--grey-2);
-  scrollbar-arrow-color: var(--grey-2);
-  scrollbar-shadow-color: var(--grey-5);
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 3px;
-}
-
-::-webkit-scrollbar-button {
-  background-color: var(--grey-5);
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--grey-5);
-}
-
-::-webkit-scrollbar-track-piece {
-  background-color: var(--grey-2);
-}
-
-::-webkit-scrollbar-thumb {
-  height: 50px;
-  background-color: var(--grey-5);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-corner {
-  background-color: var(--grey-5);
-}
-
-::-webkit-resizer {
-  background-color: var(--grey-5);
 }
 
 #search-bar .search-results ul[class*=character-grid] {
@@ -407,9 +373,31 @@ time,
 input,
 textarea,
 li,
+td,
 div {
   text-shadow: none !important;
   color: var(--grey-1) !important;
+}
+
+hr {
+  border-color: var(--grey-5) !important;
+}
+
+.control-group input.btn {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+  outline: none !important;
+}
+.control-group input.btn:hover {
+  box-shadow: 0px 0 0px 2px var(--white-10) !important;
+}
+.control-group input.btn:focus {
+  box-shadow: 0px 0 0px 2px var(--white-30) !important;
 }
 
 .dashboard-progress,
@@ -618,6 +606,106 @@ div {
 .forum-topics-list .see-more .small-caps {
   background-image: none !important;
   box-shadow: var(--shadow-4) !important;
+}
+
+.individual-item a.level-icon {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+}
+.individual-item h2 {
+  border-bottom-color: var(--grey-5) !important;
+}
+.individual-item span[class*=-icon] {
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+  color: var(--grey-3) !important;
+}
+.individual-item span.radical-icon {
+  background-color: var(--blue-1) !important;
+}
+.individual-item span.kanji-icon {
+  background-color: var(--yellow-1) !important;
+}
+.individual-item span.vocabulary-icon {
+  background-color: var(--green-1) !important;
+}
+.individual-item .user-synonyms .user-synonyms-add-btn::before {
+  background-color: transparent !important;
+}
+.individual-item .user-synonyms input {
+  padding-left: 5px !important;
+  border-radius: 5px !important;
+}
+.individual-item .user-synonyms button {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+  outline: none !important;
+  padding: 6px !important;
+}
+.individual-item .user-synonyms button:hover {
+  box-shadow: 0px 0 0px 2px var(--white-10) !important;
+}
+.individual-item .user-synonyms button:focus {
+  box-shadow: 0px 0 0px 2px var(--white-30) !important;
+}
+.individual-item .user-synonyms li::after {
+  background-color: transparent !important;
+}
+.individual-item .span12 > section {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+  padding: 10px !important;
+}
+.individual-item .span12 section#information {
+  margin-bottom: 20px !important;
+}
+.individual-item aside.additional-info {
+  background-color: transparent !important;
+}
+
+section#progress {
+  background-color: transparent !important;
+}
+section#progress .container {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+}
+section#progress .container section {
+  margin-left: 2vw !important;
+  margin-right: 2vw !important;
+}
+section#progress div[class*=-correct] ul span {
+  background-color: transparent !important;
+}
+section#progress .resurrect-btn {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+  outline: none !important;
+  border-radius: 5px !important;
+  border-color: transparent;
+}
+section#progress .resurrect-btn:hover {
+  box-shadow: 0px 0 0px 2px var(--white-10) !important;
+}
+section#progress .resurrect-btn:focus {
+  box-shadow: 0px 0 0px 2px var(--white-30) !important;
 }
 
 #lessons-summary header,
@@ -852,8 +940,146 @@ div {
   box-shadow: 0px 0 0px 2px var(--white-30) !important;
 }
 
+aside.level-list {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+}
+aside.level-list span {
+  color: var(--grey-3) !important;
+  box-shadow: var(--shadow-1) !important;
+}
+aside.level-list span.recently-unlocked-item {
+  background-color: var(--red-1) !important;
+}
+aside.level-list span.locked-item, aside.level-list span.all, aside.level-list span.radicals {
+  background-color: var(--blue-1) !important;
+}
+aside.level-list span.kanji {
+  background-color: var(--yellow-1) !important;
+}
+aside.level-list span.vocabulary {
+  background-color: var(--green-1) !important;
+}
+aside.level-list span.burned {
+  background-color: var(--grey-1) !important;
+}
+
+.page-list {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+}
+.page-list ul a {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+  outline: none !important;
+  border-radius: 5px !important;
+  border-color: transparent !important;
+  margin: 5px;
+}
+.page-list ul a:hover {
+  box-shadow: 0px 0 0px 2px var(--white-10) !important;
+}
+.page-list ul a:focus {
+  box-shadow: 0px 0 0px 2px var(--white-30) !important;
+}
+.page-list ul span {
+  border-color: transparent !important;
+}
+
+section[id^=level-] {
+  background-color: var(--grey-3) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  border-radius: 5px !important;
+  padding: 10px;
+}
+section[id^=level-] header {
+  background-color: transparent !important;
+}
+
+[class*=character-grid] {
+  background-color: var(--grey-2) !important;
+  border-radius: 5px !important;
+  box-shadow: var(--shadow-2) !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  padding: 5px !important;
+}
+[class*=character-grid] > li {
+  border-radius: 5px !important;
+  box-shadow: var(--shadow-1) !important;
+  margin: 5px !important;
+  background-image: none !important;
+}
+[class*=character-grid] > li.burned {
+  filter: brightness(0.5) !important;
+}
+[class*=character-grid] > li.locked {
+  filter: brightness(0.7) !important;
+}
+[class*=character-grid] > li[class|=radical] {
+  background-color: var(--blue-1) !important;
+  border-color: var(--blue-1) !important;
+}
+[class*=character-grid] > li[class|=kanji] {
+  background-color: var(--yellow-1) !important;
+  border-color: var(--yellow-1) !important;
+}
+[class*=character-grid] > li[class|=vocabulary] {
+  background-color: var(--green-1) !important;
+  border-color: var(--green-1) !important;
+}
+[class*=character-grid] > li a span,
+[class*=character-grid] > li a li {
+  color: var(--grey-3) !important;
+}
+
+.recently-unlocked-badge:before {
+  text-shadow: none !important;
+  color: var(--grey-3) !important;
+  box-shadow: var(--shadow-1) !important;
+  background-color: var(--red-1) !important;
+}
+
+.progress {
+  align-items: center !important;
+  background-color: var(--grey-2) !important;
+  border-radius: 10px !important;
+  box-shadow: var(--shadow-2) !important;
+  display: flex !important;
+  background-image: none !important;
+}
+.progress > .bar {
+  background-color: var(--blue-3) !important;
+  border-radius: 10px !important;
+  box-shadow: var(--shadow-1) !important;
+  height: 50% !important;
+  margin: 5px !important;
+  opacity: 0.75 !important;
+  background-image: none !important;
+}
+.progress > .bar span {
+  background-color: var(--grey-5) !important;
+  border-radius: 5px !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+}
+.progress > .bar span::after {
+  border-top-color: var(--grey-5) !important;
+}
+
 #reviews .user-synonyms .user-synonyms-add-btn::before {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 #reviews .user-synonyms input {
   padding-left: 5px !important;
@@ -1148,33 +1374,6 @@ div {
 #lessons #information #item-info #related-items span.vocabulary {
   background-color: var(--green-1) !important;
 }
-#reviews #information #item-info #note-meaning fieldset,
-#lessons #information #item-info #note-meaning fieldset {
-  background-color: transparent !important;
-}
-#reviews #information #item-info #note-meaning textarea,
-#lessons #information #item-info #note-meaning textarea {
-  border-radius: 5px !important;
-}
-#reviews #information #item-info #note-meaning button,
-#lessons #information #item-info #note-meaning button {
-  background-color: var(--grey-2) !important;
-  background-image: none !important;
-  box-shadow: var(--shadow-1) !important;
-  color: var(--grey-1) !important;
-  border-radius: 5px !important;
-  transition: box-shadow linear 0.2s, border linear 0.2s !important;
-  transition-property: box-shadow, border !important;
-  outline: none !important;
-}
-#reviews #information #item-info #note-meaning button:hover,
-#lessons #information #item-info #note-meaning button:hover {
-  box-shadow: 0px 0 0px 2px var(--white-10) !important;
-}
-#reviews #information #item-info #note-meaning button:focus,
-#lessons #information #item-info #note-meaning button:focus {
-  box-shadow: 0px 0 0px 2px var(--white-30) !important;
-}
 #reviews #answer-exception span,
 #lessons #answer-exception span {
   background-color: var(--grey-5) !important;
@@ -1184,6 +1383,35 @@ div {
 #reviews #answer-exception span:before,
 #lessons #answer-exception span:before {
   border-color: transparent transparent var(--grey-5) transparent;
+}
+
+#note-meaning fieldset,
+#note-reading fieldset {
+  background-color: transparent !important;
+}
+#note-meaning textarea,
+#note-reading textarea {
+  border-radius: 5px !important;
+  -webkit-text-fill-color: unset;
+}
+#note-meaning button,
+#note-reading button {
+  background-color: var(--grey-2) !important;
+  background-image: none !important;
+  box-shadow: var(--shadow-1) !important;
+  color: var(--grey-1) !important;
+  border-radius: 5px !important;
+  transition: box-shadow linear 0.2s, border linear 0.2s !important;
+  transition-property: box-shadow, border !important;
+  outline: none !important;
+}
+#note-meaning button:hover,
+#note-reading button:hover {
+  box-shadow: 0px 0 0px 2px var(--white-10) !important;
+}
+#note-meaning button:focus,
+#note-reading button:focus {
+  box-shadow: 0px 0 0px 2px var(--white-30) !important;
 }
 
 #lightning-mode.active {

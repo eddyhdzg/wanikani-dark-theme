@@ -1,0 +1,9 @@
+hr {
+  border-color: var(--grey-5) !important;
+}
+
+.control-group {
+  input.btn {
+    @include button;
+  }
+}

@@ -2,7 +2,7 @@
   .user-synonyms {
     .user-synonyms-add-btn {
       &::before {
-        background-color: transparent;
+        background-color: transparent !important;
       }
     }
     input {
@@ -250,19 +250,6 @@
           }
         }
       }
-
-      #note-meaning {
-        fieldset {
-          background-color: transparent !important;
-        }
-        textarea {
-          border-radius: 5px !important;
-        }
-
-        button {
-          @include button;
-        }
-      }
     }
   }
 
@@ -274,5 +261,20 @@
     &:before {
       border-color: transparent transparent var(--grey-5) transparent;
     }
+  }
+}
+
+#note-meaning,
+#note-reading {
+  fieldset {
+    background-color: transparent !important;
+  }
+  textarea {
+    border-radius: 5px !important;
+    -webkit-text-fill-color: unset;
+  }
+
+  button {
+    @include button;
   }
 }

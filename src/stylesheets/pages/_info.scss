@@ -1,0 +1,91 @@
+.individual-item {
+  a.level-icon {
+    @include box;
+    border-radius: 5px !important;
+  }
+
+  h2 {
+    border-bottom-color: var(--grey-5) !important;
+  }
+
+  span {
+    &[class*="-icon"] {
+      background-image: none !important;
+      box-shadow: var(--shadow-1) !important;
+      border-radius: 5px !important;
+      color: var(--grey-3) !important;
+    }
+
+    &.radical-icon {
+      background-color: var(--blue-1) !important;
+    }
+    &.kanji-icon {
+      background-color: var(--yellow-1) !important;
+    }
+
+    &.vocabulary-icon {
+      background-color: var(--green-1) !important;
+    }
+  }
+
+  .user-synonyms {
+    .user-synonyms-add-btn {
+      &::before {
+        background-color: transparent !important;
+      }
+    }
+    input {
+      padding-left: 5px !important;
+      border-radius: 5px !important;
+    }
+
+    button {
+      @include button;
+      padding: 6px !important;
+    }
+
+    li::after {
+      background-color: transparent !important;
+    }
+  }
+
+  .span12 {
+    > section {
+      @include box;
+      border-radius: 5px !important;
+      padding: 10px !important;
+    }
+
+    section#information {
+      margin-bottom: 20px !important;
+    }
+  }
+
+  aside.additional-info {
+    background-color: transparent !important;
+  }
+}
+
+section#progress {
+  background-color: transparent !important;
+
+  .container {
+    @include box;
+    border-radius: 5px !important;
+
+    section {
+      margin-left: 2vw !important;
+      margin-right: 2vw !important;
+    }
+  }
+
+  div[class*="-correct"] ul span {
+    background-color: transparent !important;
+  }
+
+  .resurrect-btn {
+    @include button;
+    border-radius: 5px !important;
+    border-color: transparent;
+  }
+}
