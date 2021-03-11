@@ -104,6 +104,7 @@
 
     #answer-form {
       position: relative !important;
+      z-index: 10;
       fieldset {
         padding: 0 !important;
         input {
@@ -251,6 +252,10 @@
         }
       }
     }
+
+    #all-info {
+      background-color: var(--grey-4) !important;
+    }
   }
 
   #answer-exception span {
@@ -265,7 +270,9 @@
 }
 
 #note-meaning,
-#note-reading {
+#note-reading,
+#supplement-voc-reading-notes,
+#supplement-voc-meaning-notes {
   fieldset {
     background-color: transparent !important;
   }

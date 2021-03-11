@@ -1,0 +1,56 @@
+#lessons,
+#reviews {
+  .ui-small {
+    background-color: transparent;
+  }
+
+  button {
+    &.icon-plus,
+    &.icon-minus {
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  #reorder_ultimate {
+    @include box;
+    margin: 10px !important;
+    padding: 10px !important;
+
+    ul {
+      &.types {
+        item {
+          color: var(--grey-3) !important;
+        }
+      }
+
+      &.levels {
+        item {
+          background-color: var(--grey-4) !important;
+        }
+      }
+
+      item {
+        box-shadow: var(--shadow-1) !important;
+        border-radius: 5px !important;
+
+        &.radical {
+          background-color: var(--blue-1) !important;
+        }
+
+        &.kanji {
+          background-color: var(--yellow-1) !important;
+        }
+
+        &.vocabulary {
+          background-color: var(--green-1) !important;
+        }
+      }
+    }
+
+    button.reorder {
+      @include button;
+      border-color: transparent;
+    }
+  }
+}
