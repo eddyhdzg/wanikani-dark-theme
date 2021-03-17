@@ -33,6 +33,7 @@ aside.level-list {
 .page-list {
   @include box;
   border-radius: 5px !important;
+  padding: 10px;
 
   ul {
     a {

@@ -717,8 +717,8 @@ section#progress .container {
   border-radius: 5px !important;
 }
 section#progress .container section {
-  margin-left: 2vw !important;
-  margin-right: 2vw !important;
+  margin-left: 10px !important;
+  margin-right: 10px !important;
 }
 section#progress div[class*=-correct] ul span {
   background-color: transparent !important;
@@ -1053,6 +1053,7 @@ aside.level-list span.burned {
   background-image: none !important;
   box-shadow: var(--shadow-1) !important;
   border-radius: 5px !important;
+  padding: 10px;
 }
 .page-list ul a {
   background-color: var(--grey-2) !important;
@@ -1559,6 +1560,10 @@ section[id^=level-] header {
 #supplement-voc-reading-notes button:focus,
 #supplement-voc-meaning-notes button:focus {
   box-shadow: 0px 0 0px 2px var(--white-30) !important;
+}
+
+#item-info blockquote {
+  background-color: transparent !important;
 }
 
 section.settings-section {
