@@ -1,5 +1,8 @@
 # wanikani-dark-theme
 
+### Downloads
+- [chrome web extension](https://chrome.google.com/webstore/detail/wanikani-dark-mode/fapafgjbghacpnfbljceaknggliakljd)
+
 ### Description
 
 Wanikani dark mode extension.
